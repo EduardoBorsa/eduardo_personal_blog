@@ -7,6 +7,7 @@ defmodule EduardoPersonalBlogWeb.Router do
 
   scope "/api", EduardoPersonalBlogWeb do
     pipe_through :api
+    resources "/posts", PostController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
